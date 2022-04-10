@@ -1,11 +1,64 @@
 import re
 import fileinput
 
-gh_uname = 'test gh_uname'  # input("GitHub username: ")
-usr_name = 'test usr_name'  # input("Your name: ")
-prj_name = 'test prj_name'  # input("Name of the project: ")
+
+print('''
+         .______    __           ___      .__   __.  __  ___                
+         |   _  \  |  |         /   \     |  \ |  | |  |/  /                
+         |  |_)  | |  |        /  ^  \    |   \|  | |  '  /                 
+         |   _  <  |  |       /  /_\  \   |  . `  | |    <                  
+         |  |_)  | |  `----. /  _____  \  |  |\   | |  .  \                 
+         |______/  |_______|/__/     \__\ |__| \__| |__|\__\                
+                                                                            
+   .______   ____    ____ .___________. __    __    ______   .__   __.      
+   |   _  \  \   \  /   / |           ||  |  |  |  /  __  \  |  \ |  |      
+   |  |_)  |  \   \/   /  `---|  |----`|  |__|  | |  |  |  | |   \|  |      
+   |   ___/    \_    _/       |  |     |   __   | |  |  |  | |  . `  |      
+   |  |          |  |         |  |     |  |  |  | |  `--'  | |  |\   |      
+   | _|          |__|         |__|     |__|  |__|  \______/  |__| \__|      
+                                                                            
+.______   .______        ______          __   _______   ______ .___________.
+|   _  \  |   _  \      /  __  \        |  | |   ____| /      ||           |
+|  |_)  | |  |_)  |    |  |  |  |       |  | |  |__   |  ,----'`---|  |----`
+|   ___/  |      /     |  |  |  | .--.  |  | |   __|  |  |         |  |     
+|  |      |  |\  \----.|  `--'  | |  `--'  | |  |____ |  `----.    |  |     
+| _|      | _| `._____| \______/   \______/  |_______| \______|    |__|     
+
+                            by Jackson Burns
+               github.com/JacksonBurns/blank-python-project                                             
+'''
+      )
+
+gh_uname = input("GitHub username: ")
+while not re.search(r"^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$", gh_uname, re.IGNORECASE):
+    print('''
+    Username may only contain alphanumeric characters or hyphens,
+    cannot have multiple consecutive hyphens, and cannot begin or end with a hyphen.
+    Maximum length is 39 characters.
+    ''')
+    gh_uname = input("GitHub username: ")
+
+usr_name = input("Your name: ")
+
+prj_name = input("Name of the project: ")
+while not re.search(r"^[a-z\d](?:[a-z\d]|-|_(?=[a-z\d])){0,61}$", prj_name, re.IGNORECASE):
+    print('''
+    Project name may only contain alphanumeric characters or hyphens/underscores,
+    cannot have multiple consecutive hyphens, and cannot begin or end with a hyphen.
+    Maximum length is 62 characters.
+    ''')
+    prj_name = input("Name of the project: ")
+
 pypi_name = 'test pypi_name'  # input("Name for the PyPI package: ")
-slogan = 'test slogan'  # input("Slogan for your project: ")
+
+prj_name = input("Name for the PyPI package: ")
+while not re.search(r"^[a-z\d](?:[a-z\d]|-|_(?=[a-z\d])){0,61}$", prj_name):
+    print('''
+    Package name may only contain lowercase alphanumeric characters or underscores and should be succinct.
+    ''')
+    prj_name = input("Name for the PyPI package: ")
+
+slogan = input("Slogan for your project: ")
 
 project_files = [
     'setup.py',
