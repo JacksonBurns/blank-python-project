@@ -26,7 +26,7 @@ cwd = pathlib.Path(__file__).parent
 README = (cwd / "README.md").read_text()
 
 setup(
-    name="blankpythonproject",
+    name="blpyproj",
     version=get_version("blankpythonproject/__init__.py"),
     description="Catchy slogan.",
     long_description=README,

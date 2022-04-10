@@ -7,7 +7,7 @@ import unittest
 
 class Test_blankpythonproject(unittest.TestCase):
     """
-    Test the various functionalities of simsplitchem.
+    Test the various functionalities of blankpythonproject.
     """
 
     @classmethod
