@@ -21,11 +21,11 @@ for filename in project_files:
         for line in file:
             if re.search("blankpythonproject", line):
                 print(line.replace('blankpythonproject', prj_name), end='')
-            if re.search("JacksonBurns", line):
+            elif re.search("JacksonBurns", line):
                 print(line.replace('JacksonBurns', gh_uname), end='')
-            if re.search("Jackson Burns", line):
+            elif re.search("Jackson Burns", line):
                 print(line.replace('Jackson Burns', usr_name), end='')
-            if re.search("blpyproj", line):
+            elif re.search("blpyproj", line):
                 print(line.replace('blpyproj', pypi_name), end='')
             else:
                 print(line, end='')
