@@ -4,10 +4,10 @@ test package
 Submodules
 ----------
 
-test.test\_simsplitchem module
-------------------------------
+test.test\_blankpythonproject module
+------------------------------------
 
-.. automodule:: test.test_simsplitchem
+.. automodule:: test.test_blankpythonproject
    :members:
    :undoc-members:
    :show-inheritance:
