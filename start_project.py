@@ -34,6 +34,7 @@ def replace_blanks():
 
 
 replace_blanks()
+input('continue to iteration 2')
 replace_blanks()
 
 # rename image
