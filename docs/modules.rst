@@ -7,4 +7,3 @@ blank-python-project
    setup
    simsplitchem
    test
-   test
