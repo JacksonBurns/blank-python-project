@@ -16,19 +16,25 @@ project_files = [
     '.github/workflows/run_unix_tests.yml',
 ]
 
-for filename in project_files:
-    with fileinput.FileInput(filename, inplace=True) as file:
-        for line in file:
-            if re.search("blankpythonproject", line):
-                print(line.replace('blankpythonproject', prj_name), end='')
-            elif re.search("JacksonBurns", line):
-                print(line.replace('JacksonBurns', gh_uname), end='')
-            elif re.search("Jackson Burns", line):
-                print(line.replace('Jackson Burns', usr_name), end='')
-            elif re.search("blpyproj", line):
-                print(line.replace('blpyproj', pypi_name), end='')
-            else:
-                print(line, end='')
+
+def replace_blanks():
+    for filename in project_files:
+        with fileinput.FileInput(filename, inplace=True) as file:
+            for line in file:
+                if re.search("blankpythonproject", line):
+                    print(line.replace('blankpythonproject', prj_name), end='')
+                elif re.search("JacksonBurns", line):
+                    print(line.replace('JacksonBurns', gh_uname), end='')
+                elif re.search("Jackson Burns", line):
+                    print(line.replace('Jackson Burns', usr_name), end='')
+                elif re.search("blpyproj", line):
+                    print(line.replace('blpyproj', pypi_name), end='')
+                else:
+                    print(line, end='')
+
+
+replace_blanks()
+replace_blanks()
 
 # rename image
 
