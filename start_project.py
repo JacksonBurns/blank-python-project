@@ -96,8 +96,10 @@ def replace_blanks():
 
 
 it_limit = 0
-while replace_blanks() and it_limit < 5:
-    continue
+while it_limit < 5:
+    if not replace_blanks():
+        break
+    it_limit += 1
 
 # rename image
 
