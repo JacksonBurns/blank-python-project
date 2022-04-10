@@ -1,6 +1,6 @@
 import re
 import fileinput
-
+import os
 
 print('''
          .______    __           ___      .__   __.  __  ___                
@@ -104,12 +104,23 @@ while it_limit < 5:
         break
     it_limit += 1
 
-# rename image
+og_dir = os.getcwd()
 
-# rename test_blankpythonproject.py
+os.rename('blankpythonproject_logo.png', prj_name + '_logo.png')
 
-# rename example notebook
+os.rename(
+    os.path.join(og_dir, 'test', 'test_blankpythonproject.py'),
+    os.path.join(og_dir, 'test', 'test_' + prj_name + '.py'),
+)
 
-# rename source directory
+os.rename(
+    os.path.join(og_dir, 'examples', 'blankpythonproject_example.ipynb'),
+    os.path.join(og_dir, 'examples', prj_name + '_example.ipynb'),
+)
 
-# rename main file
+os.rename(
+    os.path.join(og_dir, 'blankpythonproject', 'blankpythonproject.py'),
+    os.path.join(og_dir, 'blankpythonproject', prj_name + '.py'),
+)
+
+os.rename('blankpythonproject', prj_name)
