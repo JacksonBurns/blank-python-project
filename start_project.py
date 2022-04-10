@@ -2,7 +2,7 @@ import re
 import fileinput
 import os
 
-print('''
+print(r'''
          .______    __           ___      .__   __.  __  ___
          |   _  \  |  |         /   \     |  \ |  | |  |/  /
          |  |_)  | |  |        /  ^  \    |   \|  | |  '  /
