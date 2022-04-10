@@ -1,14 +1,12 @@
 # blank-python-project
 ## Using this template:
-1. Rename `blankpythonproject` directory to whatever your project and PyPI file are called.
-2. Update `./setup.py` with your details.
-3. Add your requirements to `./requirements.txt`.
-4. Rename `test/test_blankpythonproject.py` and add tests.
+1. Run `start_project.py`, which will gather some info and rename everything.
+2. Add tests.
+3. Add your source code to your source directory.
+4. Add your requirements to `./requirements.txt`.
 5. Curate examples as python notebooks and add them to `./examples/`.
-6. Add your source code to your source directory.
-7. Edit `./.github/workflows/run_unix_tests.yml` to `--omit` the appropriate files.
-8. Replace `./blankpythonproject_logo.png` with your logo.
-9. Delete this line and everything above it.
+6. Replace `./blankpythonproject_logo.png` with your logo.
+7. Delete this line and everything above it, as well as `start_project.py`.
 
 <h1 align="center">BlankPythonProject</h1> 
 <h3 align="center">Catchy Slogan</h3>
