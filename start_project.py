@@ -25,6 +25,9 @@ def replace_blanks():
                 if re.search("blankpythonproject", line):
                     print(line.replace('blankpythonproject', prj_name), end='')
                     changed = True
+                elif re.search("blank-python-project", line):
+                    print(line.replace('blank-python-project', prj_name), end='')
+                    changed = True
                 elif re.search("JacksonBurns", line):
                     print(line.replace('JacksonBurns', gh_uname), end='')
                     changed = True
