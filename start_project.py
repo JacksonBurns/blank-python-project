@@ -30,7 +30,6 @@ for filename in project_files:
             else:
                 print(line)
 
-
 # rename image
 
 # rename test_blankpythonproject.py
