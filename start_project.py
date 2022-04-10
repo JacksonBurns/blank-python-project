@@ -17,18 +17,18 @@ project_files = [
 ]
 
 for filename in project_files:
-    with fileinput.FileInput(filename, inplace=True, backup='.bak') as file:
+    with fileinput.FileInput(filename, inplace=True) as file:
         for line in file:
             if re.search("blankpythonproject", line):
-                print(line.replace('blankpythonproject', prj_name))
+                print(line.replace('blankpythonproject', prj_name), end='')
             if re.search("JacksonBurns", line):
-                print(line.replace('JacksonBurns', gh_uname))
+                print(line.replace('JacksonBurns', gh_uname), end='')
             if re.search("Jackson Burns", line):
-                print(line.replace('Jackson Burns', usr_name))
+                print(line.replace('Jackson Burns', usr_name), end='')
             if re.search("blpyproj", line):
-                print(line.replace('blpyproj', pypi_name))
+                print(line.replace('blpyproj', pypi_name), end='')
             else:
-                print(line)
+                print(line, end='')
 
 # rename image
 
