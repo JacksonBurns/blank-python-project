@@ -90,6 +90,9 @@ def replace_blanks():
                 elif re.search("blpyproj", line):
                     print(line.replace('blpyproj', pypi_name), end='')
                     changed = True
+                elif re.search("Catchy slogan.", line):
+                    print(line.replace('Catchy slogan.', slogan), end='')
+                    changed = True
                 else:
                     print(line, end='')
     return changed
