@@ -1,4 +1,3 @@
-# from simsplitchem import simsplitchem as splitchem
-from .simsplitchem import placeholder
+from .blankpythonproject import placeholder
 
 __version__ = "0.0.0"

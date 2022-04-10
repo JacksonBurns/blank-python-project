@@ -2,10 +2,10 @@ import os
 import sys
 import unittest
 
-# from simsplitchem import splitchem
+# from blankpythonproject import blankpythonproject
 
 
-class Testsimsplitchem(unittest.TestCase):
+class Test_blankpythonproject(unittest.TestCase):
     """
     Test the various functionalities of simsplitchem.
     """

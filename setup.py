@@ -26,12 +26,12 @@ cwd = pathlib.Path(__file__).parent
 README = (cwd / "README.md").read_text()
 
 setup(
-    name="simsplitchem",
-    version=get_version("simsplitchem/__init__.py"),
-    description="Simplifying ML Splitting with Chemicals",
+    name="blankpythonproject",
+    version=get_version("blankpythonproject/__init__.py"),
+    description="Catchy slogan.",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/JacksonBurns/SimplifySplittingChemicals",
+    url="https://github.com/JacksonBurns/blank-python-project",
     author="Jackson Burns",
     author_email="jburnsky@udel.edu",
     license="MIT",
