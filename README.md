@@ -1,6 +1,6 @@
 # blank-python-project
 ## Using this template:
-1. Rename `src` to whatever your project and PyPI file are called.
+1. Rename `blankpythonproject` directory to whatever your project and PyPI file are called.
 2. Update `./setup.py` with your details.
 3. Add your requirements to `./requirements.txt`.
 4. Rename `test/test_blankpythonproject.py` and add tests.
