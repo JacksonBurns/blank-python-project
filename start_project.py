@@ -18,24 +18,30 @@ project_files = [
 
 
 def replace_blanks():
+    changed = False
     for filename in project_files:
         with fileinput.FileInput(filename, inplace=True) as file:
             for line in file:
                 if re.search("blankpythonproject", line):
                     print(line.replace('blankpythonproject', prj_name), end='')
+                    changed = True
                 elif re.search("JacksonBurns", line):
                     print(line.replace('JacksonBurns', gh_uname), end='')
+                    changed = True
                 elif re.search("Jackson Burns", line):
                     print(line.replace('Jackson Burns', usr_name), end='')
+                    changed = True
                 elif re.search("blpyproj", line):
                     print(line.replace('blpyproj', pypi_name), end='')
+                    changed = True
                 else:
                     print(line, end='')
+    return changed
 
 
-replace_blanks()
-input('continue to iteration 2')
-replace_blanks()
+it_limit = 0
+while replace_blanks() and it_limit < 5:
+    continue
 
 # rename image
 
