@@ -1,11 +1,11 @@
 import re
 import fileinput
 
-gh_uname = input("GitHub username: ")
-usr_name = input("Your name: ")
-prj_name = input("Name of the project: ")
-pypi_name = input("Name for the PyPI package: ")
-slogan = input("Slogan for your project: ")
+gh_uname = 'test gh_uname'  # input("GitHub username: ")
+usr_name = 'test usr_name'  # input("Your name: ")
+prj_name = 'test prj_name'  # input("Name of the project: ")
+pypi_name = 'test pypi_name'  # input("Name for the PyPI package: ")
+slogan = 'test slogan'  # input("Slogan for your project: ")
 
 project_files = [
     'setup.py',
@@ -17,7 +17,7 @@ project_files = [
 ]
 
 for filename in project_files:
-    with fileinput.FileInput(filename, inplace=True) as file:
+    with fileinput.FileInput(filename, inplace=True, backup='.bak') as file:
         for line in file:
             if re.search("blankpythonproject", line):
                 print(line.replace('blankpythonproject', prj_name))
