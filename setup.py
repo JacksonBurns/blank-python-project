@@ -33,7 +33,6 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/JacksonBurns/blank-python-project",
     author="Jackson Burns",
-    author_email="jburnsky@udel.edu",
     license="MIT",
     classifiers=["Programming Language :: Python :: 3"],
     install_requires=read("requirements.txt").split("\n"),

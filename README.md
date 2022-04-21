@@ -22,4 +22,4 @@
 </p>
 
 ## Online Documentation
-[Click here to read the docuemtntation](https://JacksonBurns.github.io/blank-python-project/)
+[Click here to read the documentation](https://JacksonBurns.github.io/blank-python-project/)
