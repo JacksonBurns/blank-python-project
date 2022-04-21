@@ -66,6 +66,9 @@ project_files = [
     'blankpythonproject/__init__.py',
     'blankpythonproject/blankpythonproject.py',
     '.github/workflows/run_unix_tests.yml',
+    'docs/conf.py',
+    'docs/index.rst',
+    'docs/modules.rst',
 ]
 
 
