@@ -1,15 +1,6 @@
 blankpythonproject package
 ==========================
 
-Subpackages
------------
-
-.. toctree::
-   :maxdepth: 4
-
-   blankpythonproject.samplers
-   blankpythonproject.utils
-
 Submodules
 ----------
 

@@ -6,4 +6,5 @@ blank-python-project
 
    blankpythonproject
    setup
+   start_project
    test
