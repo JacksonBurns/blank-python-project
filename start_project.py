@@ -59,7 +59,7 @@ Package name may only contain lowercase alphanumeric characters or underscores a
 slogan = input("Slogan for your project: ")
 
 project_files = [
-    'setup.py',
+    'pyproject.toml',
     'README.md',
     'test/test_blankpythonproject.py',
     'blankpythonproject/__init__.py',
@@ -79,6 +79,9 @@ def replace_blanks():
             for line in file:
                 if re.search("blankpythonproject", line):
                     print(line.replace('blankpythonproject', prj_name), end='')
+                    changed = True
+                elif re.search("BlankPythonProject", line):
+                    print(line.replace('BlankPythonProject', prj_name), end='')
                     changed = True
                 elif re.search("blank-python-project", line):
                     print(line.replace('blank-python-project', prj_name), end='')
