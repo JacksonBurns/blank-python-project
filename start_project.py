@@ -66,7 +66,8 @@ project_files = [
     'test/test_blankpythonproject.py',
     'blankpythonproject/__init__.py',
     'blankpythonproject/blankpythonproject.py',
-    '.github/workflows/run_unix_tests.yml',
+    '.github/workflows/CI.yml',
+    '.github/workflows/gen_docs.yml',
     'docs/conf.py',
     'docs/index.rst',
     'docs/modules.rst',
@@ -102,7 +103,7 @@ def replace_blanks():
 
 
 it_limit = 0
-while it_limit < 5:
+while it_limit < 10:
     if not replace_blanks():
         break
     it_limit += 1
