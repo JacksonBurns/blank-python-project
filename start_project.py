@@ -128,7 +128,11 @@ os.rename(
 os.rename('blankpythonproject', prj_name)
 
 print(r'''
-...updates complete - delete this file (start_project.py) and make your first commit to get started.
+...updates complete - delete this file (start_project.py) and make your
+first commit to get started.
+
+If you wish to use a license other than MIT, delete the existing LICENSE
+file and update pyproject.toml to reflect the new license.
 
 Happy coding!
 ''')
