@@ -49,14 +49,12 @@ Maximum length is 62 characters.
 ''')
     prj_name = input("Name of the project: ")
 
-pypi_name = 'test pypi_name'  # input("Name for the PyPI package: ")
-
-prj_name = input("Name for the PyPI package: ")
-while not re.search(r"^[a-z\d](?:[a-z\d]|-|_(?=[a-z\d])){0,61}$", prj_name):
+pypi_name = input("Name for the PyPI package: ")
+while not re.search(r"^[a-z\d](?:[a-z\d]|-|_(?=[a-z\d])){0,61}$", pypi_name):
     print('''
-    Package name may only contain lowercase alphanumeric characters or underscores and should be succinct.
+Package name may only contain lowercase alphanumeric characters or underscores and should be succinct.
     ''')
-    prj_name = input("Name for the PyPI package: ")
+    pypi_name = input("Name for the PyPI package: ")
 
 slogan = input("Slogan for your project: ")
 
@@ -66,7 +64,8 @@ project_files = [
     'test/test_blankpythonproject.py',
     'blankpythonproject/__init__.py',
     'blankpythonproject/blankpythonproject.py',
-    '.github/workflows/run_unix_tests.yml',
+    '.github/workflows/CI.yml',
+    '.github/workflows/gen_docs.yml',
     'docs/conf.py',
     'docs/index.rst',
     'docs/modules.rst',
@@ -102,7 +101,7 @@ def replace_blanks():
 
 
 it_limit = 0
-while it_limit < 5:
+while it_limit < 10:
     if not replace_blanks():
         break
     it_limit += 1
@@ -127,3 +126,13 @@ os.rename(
 )
 
 os.rename('blankpythonproject', prj_name)
+
+print(r'''
+...updates complete - delete this file (start_project.py) and make your
+first commit to get started.
+
+If you wish to use a license other than MIT, delete the existing LICENSE
+file and update pyproject.toml to reflect the new license.
+
+Happy coding!
+''')
